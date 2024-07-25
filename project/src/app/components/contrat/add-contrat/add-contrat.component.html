@@ -1,0 +1,181 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6"> 
+      <b style="margin-right: 17px;">Liste Locataires:_{{ nblocataires}}_ </b>
+      <mat-form-field class="example-full-width">
+
+        <mat-label>Filter Data</mat-label>
+
+        <input type="text" name="search4" aria-describedby="search-addon" aria-label="Search" matInput
+          placeholder="Search ..." id="search4" [(ngModel)]="searchValue4" placeholder="Search..." value="">
+        <i class="fas fa-search"></i>
+
+      </mat-form-field>
+      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+        <table class="table table-bordered table-striped mb-0">
+          <thead>
+            <tr>
+              <th scope="col">CIN</th>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              
+              <th scope="col">#</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let l of locataires |searchfilter4:searchValue4 ;let i=index" (click)="onNoClick(i)">
+            <tr>
+              <td>{{l.cin}}</td>
+              <td>{{l.firstname}}</td>
+              <td>{{l.lastname}}</td>
+              
+              <td><input type="radio" id="male" name="gender" value="">
+              </td>
+            </tr>
+
+
+
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-xs-6"><b style="margin-right: 17px;">Liste Locateurs:_{{ nblocateurs}}_ </b>
+      <mat-form-field class="example-full-width">
+
+        <mat-label>Filter Data</mat-label>
+
+        <input type="text" name="search5" aria-describedby="search-addon" aria-label="Search" matInput
+          placeholder="Search ..." id="search5"[(ngModel)]="searchValue5" placeholder="Search..." value="">
+        <i class="fas fa-search"></i>
+
+      </mat-form-field>
+      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+        <table class="table table-bordered table-striped mb-0">
+          <thead>
+            <tr>
+              <th scope="col">Cin</th>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              
+              <th scope="col">#</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let l of locateurs |searchfilter5:searchValue5;let i=index" (click)="onNoClick2(i)">
+            <tr>
+              
+              <td>{{l.cin}}</td>
+              <td>{{l.firstname}}</td>
+              <td>{{l.lastname}}</td>
+              
+              <td><input type="radio" id="jgklg" name="hgkgf" value="">
+              </td>
+
+            </tr>
+
+
+
+          </tbody>
+
+        </table>
+
+      </div>
+    </div>
+    <div class="col-xs-6" style="margin-top: 30px;"><b style="margin-right: 17px;">Liste Maisons non louee: _{{ nbmaisons}}_</b>
+      <mat-form-field class="example-full-width">
+
+        <mat-label>Filter Data</mat-label>
+
+        <input type="text" name="search6" aria-describedby="search-addon" aria-label="Search" matInput
+          placeholder="Search ..." id="search6" [(ngModel)]="searchValue6" placeholder="Search...">
+        <i class="fas fa-search"></i>
+
+      </mat-form-field>
+      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+        <table class="table table-bordered table-striped mb-0">
+          <thead>
+            <tr>
+              
+              <th scope="col">id</th>
+              <th scope="col">etat</th>
+              <th scope="col">ismeuble</th>
+              <th scope="col">#</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let m of maisons |searchfilter6:searchValue6 ;let i=index" (click)="onNoClick3(i)">
+            <tr>
+              <td>{{m.id}}</td>
+              <td>{{m.etat}}</td>
+              <td>{{m.ismeuble}}</td>
+              
+             
+              <td><input type="radio" id="malefddffd" name="genderdffd" value="">
+              </td>
+            </tr>
+
+
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+    <div class="col-xs-6" style="margin-left: -90px; margin-top: 60px;"><b style="margin-right: 17px;">Add Contract Information:</b>
+      
+      
+      
+      
+      <form class="example-form" >
+       
+        <div class="col-md-6"  >
+          <div class="input-group">
+
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> </span>
+          
+            <label style="color: blue;">date debut:</label>
+
+            <input id="date" type="date" class="form-control" name="date"  [(ngModel)]="c.datedebut">
+          </div>
+        </div>
+        <div class="col-md-6"  >
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> </span>
+           
+            <label style="color: blue;">date fin:</label>
+
+            <input id="date2" type="date" class="form-control" name="date2"  [(ngModel)]="c.datefin">
+          </div>
+        </div>
+        <div class="col-md-6" >
+          <div class="form-group">
+            <label for="exampleInputEmail1" style="color: blue;">Prix final</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" 
+            aria-describedby="emailHelp" placeholder="Enter final price"name="prixfinal" [(ngModel)]="c.prixfinal">
+          </div>
+        </div>
+       
+        <div class="col-md-9">
+         
+        <button class="btn btn-success" (click)=" addLocataireRedirect()">submit<i class="fa fa-plus"></i></button>
+          <!--<button (click)=" addLocataireRedirect()">Add<i class="fa fa-plus"></i></button>-->
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+</div>

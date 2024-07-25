@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4" *ngFor="let maison of maisons ;let i=index" style="width: 30.33333333%;">
+
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="candidate-list candidate-grid">
+                            <div class="candidate-list-image">
+                                <img class="img-fluid"
+                                    src="https://www.menzili.tn/upload/photos/2019/10/18/12/19/h447s23952.png" alt="">
+                            </div>
+                            <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                    <div class="candidate-list-title">
+                                        <h5><a href="javascript:;">Etat: {{ maison.etat}}</a></h5>
+                                    </div>
+                                    <div class="candidate-list-option">
+                                        <ul class="list-unstyled">
+                                            <!--  <li><i class="fas fa-filter pr-1"></i>Recruitment Consultancy</li>-->
+                                            <li><i class="fas fa-map-marker-alt pr-1"></i> {{ adresse}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p> <span style="font-size: 15px;"> <i class="fa fa-money"></i> old Price:</span> <span
+                                        style="font-size: 20px; color: coral; text-decoration: line-through;"> {{
+                                        maison.prix}} $ </span> </p>
+                                <p> <span style="font-size: 15px;"><i class="fa fa-money"></i> new price:</span> <span
+                                        style="font-size: 20px; color: coral;"> {{ maison.remisepromo}} $ </span> </p>
+                               
+                               
+
+                            </div>
+                            <a href="javascript:;" class="table-link text-info" (click)="visualiseLink(i)">
+                                <span class="fa-stack">
+                                    <i class="fa fa-eye" style="font-size: 15px; font-weight: 1000; margin-left: 80px; color: darkblue;"></i>
+                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            
+                            <a href="javascript:;" class="table-link text-info" (click)="updateLink(i)">
+                                <span class="fa-stack">
+                                    <i class="fa fa-edit" style="font-size: 15px; font-weight: 1000; margin-left: 80px; color: darkblue;"></i>
+                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>     
+                              
+                           
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

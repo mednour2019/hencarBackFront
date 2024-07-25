@@ -1,0 +1,79 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title">Add Concierge</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>firstname</label>
+                    <input type="text" (keypress)="keyPress($event)" placeholder="first name" name="firstname" id="firstname" [(ngModel)]="c.firstname" class="form-control">
+                </div>        
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>lastName</label>
+                    <input type="text" placeholder="last name" name="lastname" id="lastname" [(ngModel)]="c.lastname" class="form-control">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>email</label>
+                    <input type="text" placeholder="email" name="email" id="email" [(ngModel)]="c.email" class="form-control">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="text" placeholder="password" name="password" id="password" [(ngModel)]="c.password" class="form-control">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>cin</label>
+                    <input type="text" placeholder="cin" name="cin" id="cin" [(ngModel)]="c.cin" class="form-control">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>tel</label>
+                    <input type="text"  placeholder="tel" name="tel" id="tel" [(ngModel)]="c.tel" class="form-control">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Adresse</label>
+                    <input type="text" name="adresse" placeholder="adresse"  id="adresse" [(ngModel)]="c.adress" class="form-control">
+
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" [(ngModel)]="c.sexe" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option2" [(ngModel)]="c.sexe" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Default radio
+            </label>
+          </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <button class="btn btn-success" (click)="ajouter()">ADD <i class="fa fa-plus"></i></button>
+
+            </div>
+        </div>
+        
+    </div>
+</div>

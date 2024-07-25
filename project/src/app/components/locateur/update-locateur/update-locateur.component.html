@@ -1,0 +1,193 @@
+<div class="container" > 
+    <div class="col-md-12">  
+        <div class="col-md-4">      
+            <div class="portlet light profile-sidebar-portlet bordered">
+                <div class="profile-userpic">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-responsive" alt=""> </div>
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name"> {{l.firstname}} </div>
+                    <div class="profile-usertitle-job"> {{l.cin}} </div>
+                </div>
+                <!--  <div class="profile-userbuttons">
+                    <button type="button" class="btn btn-info  btn-sm">Follow</button>
+                    <button type="button" class="btn btn-info  btn-sm">Message</button>
+                </div>--> 
+               <!--  <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                                <i class="icon-home"></i> Ticket List </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-settings"></i> Support Staff </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-info"></i> Configurations </a>
+                        </li>
+                    </ul>
+                </div>--> 
+            </div>
+        </div>
+        <div class="col-md-8"> 
+            <div class="portlet light bordered" style="margin-right: 150px;">
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">Your info</span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div>
+                    
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Update</a></li>
+                           <!--  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>-->
+                        </ul>
+                    
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <form class="form"   action="##" method="post" id="registrationForm" [formGroup]="myForm">
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                                <mat-form-field class="example-full-width" style="margin-top: 21px;" >
+                                                        <mat-label ><h3 style="font-size: 20px;">First Name</h3></mat-label>
+                                                           <!--class="form-control"-->  <input matInput  type="text" 
+                                                            name="firstname" id="firstname" placeholder="firstname" 
+                                                            title="enter your firstname if any." formControlName="firstname"
+                                                            [(ngModel)]="l.firstname">
+                                                        <mat-error class="has-text-danger">
+                                                        your firstname does not look right
+                                                        </mat-error>
+                                                </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="col-xs-6">
+                                                    <mat-form-field class="example-full-width" style="margin-top: 21px;" >
+                                                            <mat-label ><h3 style="font-size: 20px;">Last Name</h3></mat-label>
+                                                               <!--class="form-control"-->  <input matInput  type="text" 
+                                                                name="lastname" id="lastname" placeholder="lastname" 
+                                                                title="enter your lastname if any." formControlName="lastname"
+                                                                [(ngModel)]="l.lastname">
+                                                            <mat-error class="has-text-danger">
+                                                            your lastname does not look right
+                                                            </mat-error>
+                                                    </mat-form-field>
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                                <mat-form-field class="example-full-width"  >
+                                                        <mat-label ><h3 style="font-size: 20px;">Email</h3></mat-label>
+                                                           <!--class="form-control"-->  <input matInput  type="text" 
+                                                            name="email" id="email" placeholder="email" 
+                                                            title="enter your email if any." formControlName="email"
+                                                            [(ngModel)]="l.email">
+                                                        <mat-error class="has-text-danger">
+                                                        your email does not look right
+                                                        </mat-error>
+                                                </mat-form-field>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                            <mat-form-field class="example-full-width"  >
+                                                    <mat-label ><h3 style="font-size: 20px;">Passowrd</h3></mat-label>
+                                                       <!--class="form-control"-->  <input matInput  type="text" 
+                                                        name="password" id="password" placeholder="password" 
+                                                        title="enter your password if any." formControlName="password"
+                                                        [(ngModel)]="l.password">
+                                                    <mat-error class="has-text-danger">
+                                                    your password does not look right
+                                                    </mat-error>
+                                            </mat-form-field>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                        <mat-form-field class="example-full-width"  >
+                                                <mat-label ><h3 style="font-size: 20px;">cin</h3></mat-label>
+                                                   <!--class="form-control"-->  <input matInput  type="text" 
+                                                    name="cin" id="cin" placeholder="cin" 
+                                                    title="enter your cin if any." formControlName="cin"
+                                                    [(ngModel)]="l.cin">
+                                                <mat-error class="has-text-danger">
+                                                your cin does not look right
+                                                </mat-error>
+                                        </mat-form-field>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                    <mat-form-field class="example-full-width"  >
+                                            <mat-label ><h3 style="font-size: 20px;">Tel</h3></mat-label>
+                                               <!--class="form-control"-->  <input matInput  type="text" 
+                                                name="tel" id="tel" placeholder="tel" 
+                                                title="enter your tel if any." formControlName="tel"
+                                                [(ngModel)]="l.tel">
+                                            <mat-error class="has-text-danger">
+                                            your tel does not look right
+                                            </mat-error>
+                                    </mat-form-field>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                                <mat-form-field class="example-full-width"  >
+                                        <mat-label ><h3 style="font-size: 20px;">Adresse</h3></mat-label>
+                                           <!--class="form-control"-->  <input matInput  type="text" 
+                                            name="adresse" id="adresse" placeholder="adresse" 
+                                            title="enter your adresse if any." formControlName="adresse"
+                                            [(ngModel)]="l.adress">
+                                        <mat-error class="has-text-danger">
+                                        your adresse does not look right
+                                        </mat-error>
+                                </mat-form-field>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-6">
+                        <mat-label ><h3 style="font-size: 20px;">Sexe</h3></mat-label>
+                        <div class="form-check"  >
+                            <input class="form-check-input" type="radio"  id="example-full-width" name="sexe" id="sexe" value="male" formControlName="sexe"  [(ngModel)]="l.sexe" checked>
+                            <label class="form-check-label" for="sexe" id="example-full-width">
+                             male
+                            </label>
+                          </div>
+                          <div class="form-check" >
+                            <input class="form-check-input" type="radio" id="example-full-width" name="sexe" id="sexe" value="female" formControlName="sexe" [(ngModel)]="l.sexe" checked>
+                            <label class="form-check-label" for="sexe" id="example-full-width">
+                             female
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                    
+                                    
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                        <br>
+                                        <button class="btn btn-lg btn-success" type="submit" [disabled]="myForm.invalid" (click)="update()"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                        <button  class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">Profile</div>
+                            <div role="tabpanel" class="tab-pane" id="messages">Messages</div>
+                            <div role="tabpanel" class="tab-pane" id="settings">Settings</div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

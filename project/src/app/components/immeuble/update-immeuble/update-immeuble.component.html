@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+<div class="container">
+        <div class="row">
+            <div class="col-12">
+               
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-30">
+                <div class="team-item">
+                    <div class="mb-30 position-relative d-flex align-items-center">
+                          <!--   <span class="socials d-inline-block">
+                                <a href="#" class="zmdi zmdi-facebook"></a>
+                                <a href="#" class="zmdi zmdi-twitter"></a>
+                                <a href="#" class="zmdi zmdi-google"></a>
+                                <a href="#" class="zmdi zmdi-instagram"></a>
+                                
+                            </span>-->
+                          
+                            
+                              
+                            
+                        <span class="img-holder d-inline-block">
+                                <img src="https://cdn.pixabay.com/photo/2015/07/08/10/33/apartment-building-835833_960_720.jpg" alt="Team">
+                            </span>
+                    </div>
+                    <div class="team-content">
+                        <h5 class="mb-2"> Id: {{ l.id}}</h5>
+                        <h5 class="mb-2"> Name: {{ l.name}}</h5>
+                        <p class="text-uppercase mb-0">Adresse: {{ l.adresse}}</p>
+                    </div>
+                </div>
+            </div>
+            <form class="form-horizontal" [formGroup]="myForm">
+            <div class="col-md-6 col-lg-4 mb-30">
+                <div class="form-group">
+                   
+                            <mat-form-field class="example-full-width"  >
+                                    <mat-label ><h3 style="font-size: 20px;">Name</h3></mat-label>
+                                       <!--class="form-control"-->  <input matInput  type="text" 
+                                        name="name" id="name" placeholder="name"  [(ngModel)]="l.name"
+                                        title="enter your firstname if any." formControlName="name"
+                                       >
+                                    <mat-error class="has-text-danger">
+                                    your name does not look right
+                                    </mat-error>
+                            </mat-form-field>
+                   
+                </div>
+                <div class="form-group">
+                   
+                    <mat-form-field class="example-full-width"  >
+                            <mat-label ><h3 style="font-size: 20px;">Adresse</h3></mat-label>
+                               <!--class="form-control"-->  <input matInput  type="text" 
+                                name="adresse" id="adresse" placeholder="adresse" [(ngModel)]="l.adresse"
+                                title="enter your adresse if any." formControlName="adresse"
+                              >
+                            <mat-error class="has-text-danger">
+                            your adresse does not look right
+                            </mat-error>
+                    </mat-form-field>
+                
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                        <br>
+                        <button class="btn btn-lg btn-success" type="submit" [disabled]="myForm.invalid" (click)="update()"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                        <button  class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                        </div>
+                    </div>
+            </div>
+          
+        </form>
+        </div>
+    </div>

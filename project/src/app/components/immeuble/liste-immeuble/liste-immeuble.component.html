@@ -1,0 +1,128 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<form class="example-form">
+
+    <mat-form-field class="example-full-width">
+
+        <mat-label>Filter Data</mat-label>
+
+        <input type="text" name="search" aria-describedby="search-addon" aria-label="Search" matInput
+            placeholder="Search ..." [(ngModel)]="searchValue3" id="search" placeholder="Search..." value="">
+        <i class="fas fa-search"></i>
+
+    </mat-form-field>
+
+</form>
+<button mat-raised-button color="primary" class="btn btn-success" (click)=" addImmeubleRedirect()">AddImmeuble<i
+        class="fa fa-plus"></i></button>
+
+<!--<div class="container"  >
+    <div class="row" >
+      
+        <div class="col-lg-6" *ngFor="let k of immeubles |searchfilter3:searchValue3 ;let i=index" style="width: 300px;">
+            
+            <div class="card m-b-30">
+                <div class="card-body">
+                    <div class="media" >
+                        <img class="d-flex mr-3 rounded-circle img-thumbnail thumb-lg" src="https://cdn.pixabay.com/photo/2015/07/08/10/33/apartment-building-835833_960_720.jpg" alt="Generic placeholder image" />
+                        <button type="button" class="btn btn-dark" (click)=" addMaisonRedirect(i)" style="font-size: 8px;margin-left: 15px;    height: 20px;
+                        width: 50px;    padding-left: 1px;">AddMaison</button>
+                        <button type="button" class="btn btn-dark"  style="font-size: 8px; margin-left: 164px;
+                        margin-top: -130px;    height: 20px;
+    width: 56px;     padding-left: 1px;" (click)=" showMaisonRedirect(i)">showMaison</button>
+
+                        <div class="media-body" >
+                            <h5 class="mt-0 font-18 mb-1" style="font-size: 15px;"> ID:{{k.id}}</h5>
+                            <h5 class="mt-0 font-18 mb-1"style="font-size: 15px;"> Name:{{k.name}}</h5>
+                            <p class="text-muted font-14"style="font-size: 15px;">Adress:{{k. adresse}}</p>
+                            <ul class="social-links list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a  href="javascript:;" class="table-link text-warning">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>                        
+                                 </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:;" class="table-link text-info" (click)="updateLink(i)">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-pencil fa-stack-1x fa-inverse" ></i>  
+                                        </span>
+                                    </a>                             
+                                   </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:;" class="table-link danger" (click)="onNoClick(i)" >
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x" ></i>
+                                            <i class="fa fa-trash-o fa-stack-1x fa-inverse" ></i>
+                                        </span>
+                                    </a>                      
+                                          </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let immeuble of immeubles |searchfilter3:searchValue3 ;let i=index">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="width: 77.33333333%;">
+                    <div class="card">
+                        <div class="card-body" style="text-align:center">
+                            <img style="width: 80%;height: 20%;"
+            
+                                src="https://cdn.pixabay.com/photo/2015/07/08/10/33/apartment-building-835833_960_720.jpg"
+                                alt="" srcset="">
+                        </div>
+
+                        <div class="card-footer">
+                            <h5 class="mt-0 font-18 mb-1" style="font-size: 15px;"> ID:{{immeuble.id}}</h5>
+                            <h5 class="mt-0 font-18 mb-1" style="font-size: 15px;"> Name:{{immeuble.name}}</h5>
+                            <p class="text-muted font-14" style="font-size: 15px;">Adress:{{immeuble. adresse}}</p>
+                            <ul class="social-links list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a href="javascript:;" class="table-link text-warning">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:;" class="table-link text-info" (click)="updateLink(i)">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:;" class="table-link danger" (click)="onNoClick(i)">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <br>
+                            <hr>
+                            <div style="text-align: center;">
+                                <button type="button" class="btn btn-dark btn-sm" (click)=" addMaisonRedirect(i)"
+                                    style="margin-right:5px">AddMaison</button>
+                                <button type="button" class="btn btn-dark btn-sm px-2" (click)=" showMaisonRedirect(i)"
+                                    style="margin-left:5px">showMaison</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

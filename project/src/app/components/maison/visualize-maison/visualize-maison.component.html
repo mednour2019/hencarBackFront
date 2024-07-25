@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8 mx-auto" style="background-color: #aea8a100;">
+            <h2 class="h3 mb-4 page-title">Settings</h2>
+            <div class="my-4">
+                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" class="active" id="home-tab" data-toggle="tab" href="#home"
+                            role="tab" aria-controls="home" aria-selected="false">Profile</a>
+                    </li>
+                </ul>
+                <form>
+                    <div class="row mt-5 align-items-center">
+                        <div class="col-md-3 text-center mb-5">
+                            <div class="avatar avatar-xl">
+                                <img src="https://www.menzili.tn/upload/photos/2019/10/18/12/19/h447s23952.png"
+                                    alt="..." class="avatar-img rounded-circle" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h4 class="mb-1" style="margin-left: 50px;margin-top: 30px;
+                                    ">Id:{{ idd }}</h4>
+                                    <p class="small mb-3" style="margin-left: 50px;"><span class="badge badge-dark">{{
+                                            etat }}</span></p>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-7">
+                                    <p class="text-muted">
+                                        {{ description }}
+                                    </p>
+                                </div>
+                                <!-- <div class="col">
+                                    <p class="small mb-0 text-muted">Nec Urna Suscipit Ltd</p>
+                                    <p class="small mb-0 text-muted">P.O. Box 464, 5975 Eget Avenue</p>
+                                    <p class="small mb-0 text-muted">(537) 315-1481</p>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="ismeuble">IS Meuble</label>
+                            <input type="text" id="ismeuble" class="form-control" placeholder="ismeuble" name="ismeuble"
+                                [(ngModel)]="m.ismeuble" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="price">Price</label>
+                            <input type="text" id="price" class="form-control" placeholder="price" name="price"
+                                [(ngModel)]="m.prix" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="remise">price after remise</label>
+                        <input type="text" id="remise" class="form-control" placeholder="remise" name="remise"
+                            [(ngModel)]="m.remisepromo" />
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <input type="text" id="type" class="form-control" placeholder="type" name="type"
+                            [(ngModel)]="m.type" />
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="immeuble">ImmeubleName</label>
+                            <input type="text" id="immeuble" class="form-control" placeholder="immeuble"
+                                name="immeuble" [(ngModel)]="imm_name" />
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="nbchambre">Nombre de chambres</label>
+                            <input type="text" id="nbchambre" class="form-control" placeholder="nbchambre"
+                                name="nbchambre" [(ngModel)]="m.nb_chambres" />
+
+                        </div>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

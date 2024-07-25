@@ -1,0 +1,40 @@
+<table class="table table-stripped" style="overflow-y: scroll;">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <!-- <th>email</th>-->
+              <!-- <th>password</th>-->
+              <th>cin</th>
+              <!-- <th>tel</th>-->
+              <!-- <th>adress</th>-->
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of concierges;let i=index">
+            <td>{{c.id}}</td>
+            <td>{{c.firstname}}</td>
+            <td>{{c.lastname}}</td>
+               <!--<td>{{c.email}}</td>
+            <td>{{c.password}}</td>-->
+            <td>{{c.cin}}</td>
+              <!-- <td>{{c.tel}}</td>
+            <td>{{c.adress}}</td>-->
+            <td><i class="fa fa-trash" style="margin-right:10%" (click)="onNoClick(i)"></i>
+                 <i class="fa fa-pencil"  style="margin-right:10%" (click)="updateLink(i)"></i>
+                <i class="fa fa-eye"  style="margin-right:10%" (click)="visualiseLink(i)"></i>
+
+                    </td>
+        </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-success" (click)="addPersonneRedirect()">Add Personne <i class="fa fa-plus"></i></button>
+    </div>
+</div>
+
+
+<button  (click)="refresh()">refresh</button>

@@ -1,0 +1,97 @@
+<form class="form" action="##" method="post" id="registrationForm" [formGroup]="myForm">
+    <div class="form-group">
+        <div class="col-xs-6">
+            <mat-form-field class="example-full-width">
+                <mat-label>
+                    <h3 style="font-size: 20px;">Description</h3>
+                </mat-label>
+                <!--class="form-control"--> <textarea matInput type="text" name="description" id="description"
+                    placeholder="description" title="enter your desription if any." [(ngModel)]="m.description"
+                    formControlName="description"></textarea>
+                <mat-error class="has-text-danger">
+                    your description does not look right
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-6">
+            <mat-form-field class="example-full-width">
+                <mat-label>
+                    <h3 style="font-size: 20px;">Nombre Chambres</h3>
+                </mat-label>
+                <!--class="form-control"--> <input matInput type="text" name="nbchambre" id="nbchambre"
+                    placeholder="nbchambre" title="enter your nbchambre if any." formControlName="nombrechambre"
+                    [(ngModel)]="m.nb_chambres">
+                <mat-error class="has-text-danger">
+                    your nbchambre does not look right
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-6">
+            <mat-form-field class="example-full-width">
+                <mat-label>
+                    <h3 style="font-size: 20px;">Prix</h3>
+                </mat-label>
+                <!--class="form-control"--> <input matInput type="text" name="prix" id="prix" placeholder="prix"
+                    title="enter your prix if any." formControlName="prix" [(ngModel)]="m.prix">
+                <mat-error class="has-text-danger">
+                    your prix does not look right
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-6">
+            <mat-form-field class="example-full-width">
+                <mat-label>
+                    <h3 style="font-size: 20px;">remise promo</h3>
+                </mat-label>
+                <!--class="form-control"--> <input matInput type="text" name="remisepromo" id="remisepromo"
+                    placeholder="remisepromo" title="enter your remisepromo if any." formControlName="remisepromo"
+                    [(ngModel)]="m.remisepromo">
+                <mat-error class="has-text-danger">
+                    your remisepromo does not look right
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Select type</mat-label>
+        <mat-select [(value)]="selected" formControlName="type" [(ngModel)]="m.type">
+            <mat-option>None</mat-option>
+            <mat-option value="etudiant">etudiant</mat-option>
+            <mat-option value="ouvrier">ouvrier</mat-option>
+            <mat-option value="sayefi">sayefi</mat-option>
+            <mat-option value="autre">autre</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Select type</mat-label>
+        <mat-select [(value)]="selected2" formControlName="ismeuble" [(ngModel)]="m.ismeuble">
+            <mat-option>None</mat-option>
+            <mat-option value="meuble">meuble</mat-option>
+            <mat-option value="non meuble">non meuble</mat-option>
+            
+        </mat-select>
+    </mat-form-field>
+
+    <div class="form-group">
+        <div class="col-xs-12">
+            <br>
+            <button class="btn btn-lg btn-success" type="submit" [disabled]="myForm.invalid" (click)="ajouter()"><i
+                    class="glyphicon glyphicon-ok-sign"></i> Save</button>
+            <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</form>

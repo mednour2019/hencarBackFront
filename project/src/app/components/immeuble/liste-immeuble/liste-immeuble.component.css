@@ -1,0 +1,41 @@
+body{
+    background: #eff3f6;
+    margin-top:20px;
+    }
+    .thumb-lg {
+    height: 180px;
+    width: 150px;
+    }
+    .card {
+    border: none;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.05);
+    }
+    .m-b-30 {
+    margin-bottom: 30px;
+    }
+    .social-links li a {
+    -webkit-border-radius: 50%;
+    background: #fcfdfd;
+    border-radius: 50%;
+    color: #9f9f9f;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    }
+    .mat-raised-button {
+        margin-left: 50px!important;
+        margin-bottom: 5px;
+        }
+        .example-form {
+            min-width: 150px;
+            max-width: 500px;
+            width: 100%;
+            
+          }
+          
+          .example-full-width {
+            width: 100%;
+            left: 300px;
+          }
